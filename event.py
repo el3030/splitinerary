@@ -16,3 +16,8 @@ class Event:
 
     def __eq__(self, other):
         return self.datetime == other.datetime
+
+    def __str__(self) -> str:
+        date = str(self.datetime.date())
+        time = str(self.datetime.time())
+        return f'date: {date}, time: {time}'
