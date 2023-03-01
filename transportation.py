@@ -1,5 +1,6 @@
 import event
 
+
 class Transportation(event.Event):
     def __init__(self, departure_time, arrival_time, cost=0, confirmation_code=None, *args, **kw):
         self.cost = cost
@@ -7,9 +8,10 @@ class Transportation(event.Event):
         self.arrival_time = arrival_time
         self.confirmation_code = confirmation_code
         super().__init__(*args, **kw)
-    
+
     def __str__(self) -> str:
         return super().__str__() + f', departure time: {self.departure_time}, arrival time: {self.arrival_time}'
+
 
 class Plane(Transportation):
     def __init__(self, flight_number, departure_terminal=None, arrival_terminal=None, *args, **kw):
@@ -21,6 +23,7 @@ class Plane(Transportation):
     def __str__(self) -> str:
         return super().__str__() + f', FLIGHT, flight_number: {self.flight_number}'
 
+
 class Train(Transportation):
     def __init__(self, departure_station, arrival_station, train_line=None, *args, **kw):
         self.train_line = train_line
@@ -30,6 +33,7 @@ class Train(Transportation):
 
     def __str__(self) -> str:
         return super().__str__() + f', TRAIN, departure_station: {self.departure_station}, arrival_station: {self.arrival_station}'
+
 
 class Boat(Transportation):
     def __init__(self, departure_terminal, arrival_terminal, route=None,  *args, **kw):
@@ -41,6 +45,7 @@ class Boat(Transportation):
     def __str__(self) -> str:
         return super().__str__() + f', BOAT, departure_terminal: {self.departure_terminal}, arrival_terminal: {self.arrival_terminal}'
 
+
 class Car(Transportation):
     def __init__(self, departure_location, arrival_location, company=None, *args, **kw):
         self.departure_location = departure_location
@@ -50,7 +55,3 @@ class Car(Transportation):
 
     def __str__(self) -> str:
         return super().__str__() + f', BOAT, departure_location: {self.departure_location}, arrival_location: {self.arrival_location}'
-
-
-
-

@@ -1,5 +1,8 @@
-import event, user, transportation #TODO: Do I need this?
+import event
+import user
+import transportation  # TODO: Do I need this?
 import datetime
+
 
 class Trip:
     """
@@ -10,9 +13,10 @@ class Trip:
         dates_dict (dict): {key, value}={datetime.date : event.Event}
             keys can be used to see if date exists in trip, values are lists (that can be sorted) of each day's events.
     """
+
     def __init__(self):
         self.dates_list = []
-        self.dates_dict = {} 
+        self.dates_dict = {}
 
     def add_event(self, event):
         """
@@ -24,13 +28,13 @@ class Trip:
         Returns:
             None
         """
-        date = event.datetime.date
-        if date not in self.dates_dict: 
+        date = event.datetime.date()
+        if date not in self.dates_dict:
             self.dates_list.append(date)
             self.dates_dict[date] = []
         self.dates_dict[date].append(event)
 
-    def get_events_on_date(self, date): 
+    def get_events_on_date(self, date):
         """
         Returns of the events on a certain day in order of start time.
 
@@ -53,9 +57,9 @@ class Trip:
             None
         Returns:
             dates_list (List[datetime.date]): sorted list of dates that have events on them if it exists, else None.
-            
+
         """
-        if not self.dates_list: 
+        if not self.dates_list:
             return None
         self.dates_list.sort()
         return self.dates_list
@@ -77,9 +81,7 @@ class Trip:
         all_events.sort()
         return all_events
 
-
-
-    def next_event(self):
+    def get_next_event(self):
         """
         Returns the next event that will take place for any user.
 
@@ -91,16 +93,7 @@ class Trip:
         now = datetime.datetime.now()
         all_events = self.get_all_events()
         for event in all_events:
-            if event.datetime<now:
+            if event.datetime < now:
                 continue
             return event
         return None
-
-
-
-        
-
-
-
-
-
