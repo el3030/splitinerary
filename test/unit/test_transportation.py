@@ -1,4 +1,4 @@
-from transportation import Transportation, Plane, Train, Boat, Car
+from splitinerary import Transportation, Plane, Train, Boat, Car
 
 import unittest
 import datetime

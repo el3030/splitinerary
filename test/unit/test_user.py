@@ -1,4 +1,4 @@
-from user import User
+from splitinerary import User
 
 import unittest
 

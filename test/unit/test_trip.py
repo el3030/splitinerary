@@ -1,5 +1,4 @@
-from trip import Trip
-from event import Event
+from splitinerary import Event, Trip
 
 import unittest
 import datetime
