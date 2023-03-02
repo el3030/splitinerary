@@ -26,9 +26,9 @@ class Plane(Transportation):
 
 class Train(Transportation):
     def __init__(self, departure_station, arrival_station, train_line=None, *args, **kw):
-        self.train_line = train_line
         self.departure_station = departure_station
         self.arrival_station = arrival_station
+        self.train_line = train_line
         super().__init__(*args, **kw)
 
     def __str__(self) -> str:
@@ -37,9 +37,9 @@ class Train(Transportation):
 
 class Boat(Transportation):
     def __init__(self, departure_terminal, arrival_terminal, route=None,  *args, **kw):
-        self.route = route
         self.departure_terminal = departure_terminal
         self.arrival_terminal = arrival_terminal
+        self.route = route
         super().__init__(*args, **kw)
 
     def __str__(self) -> str:
@@ -54,4 +54,4 @@ class Car(Transportation):
         super().__init__(*args, **kw)
 
     def __str__(self) -> str:
-        return super().__str__() + f', BOAT, departure_location: {self.departure_location}, arrival_location: {self.arrival_location}'
+        return super().__str__() + f', CAR, departure_location: {self.departure_location}, arrival_location: {self.arrival_location}'
