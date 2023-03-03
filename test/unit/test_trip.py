@@ -70,8 +70,6 @@ class TestGetEventfulDates(unittest.TestCase):
 
     def test_get_no_eventful_dates_success(self):
         # arrange
-        now = datetime.datetime.now()
-        date = now.date()
         trip = Trip()
 
         # act
