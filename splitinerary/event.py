@@ -1,13 +1,11 @@
-import datetime
-
-
 class Event:
     """
     Event object. Sortable by datetime.
 
     Attributes:
-        datetime: datetime.datetime object of when the user wants to arrive at the event, NOT NECESSARILY when the event starts 
-            (e.g. user might arrive at the airport 2 hours before the flight departs)
+        datetime: datetime.datetime object of when the user wants to arrive at
+        the event, NOT NECESSARILY when the event starts (e.g. user might
+        arrive at the airport 2 hours before the flight departs)
     """
 
     def __init__(self, datetime):
