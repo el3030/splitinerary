@@ -17,3 +17,14 @@ Coordinating a group to go on a trip together is difficult because some people m
 
 The end result is a comprehensive itinerary where every person in the trip can see who is doing what at any given point in time.
 
+## Details
+
+It uses a Makefile as a command registry, with the following commands:
+
+- `make`: list available commands
+- `make develop`: install and build this library and its dependencies using `pip`
+- `make build`: build the library using `setuptools`
+- `make lint`: perform static analysis of this library with `flake8` and `black`
+- `make format`: autoformat this library using `black`
+- `make test`: run automated tests with `unittest`
+- `make coverage`: run automated tests with `unittest` and collect coverage information
