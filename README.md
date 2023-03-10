@@ -4,6 +4,8 @@ Splitinerary is a collaborative itinerary library in Python.
 
 [![](https://img.shields.io/github/license/el3030/splitinerary)](https://opensource.org/license/mit/)
 [![](https://img.shields.io/github/issues/el3030/splitinerary)](https://github.com/el3030/splitinerary/issues)
+[![Build Status](https://github.com/el3030/splitinerary/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/el3030/splitinerary/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/el3030/splitinerary/branch/main/graph/badge.svg)](https://codecov.io/gh/el3030/splitinerary)
 
 
 ## Overview
