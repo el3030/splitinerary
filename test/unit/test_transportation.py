@@ -33,7 +33,7 @@ class TestTransportation(unittest.TestCase):
 
         date = str(now.date())
         time = str(now.time())
-        expected_str = f"date: {date}, time: {time}, departure time: {departure_time}, arrival time: {arrival_time}"  # noqa
+        expected_str = f"date: {date}, time: {time}, users: None, departure time: {departure_time}, arrival time: {arrival_time}"  # noqa
         # act
         transportation = Transportation(
             departure_time, arrival_time, cost, confirmation_code, now
@@ -91,7 +91,7 @@ class TestPlane(unittest.TestCase):
         departure_terminal = "LGA"
         arrival_terminal = "DTW"
 
-        expected_str = f"date: {date}, time: {time}, departure time: {departure_time}, arrival time: {arrival_time}, FLIGHT, flight_number: {flight_number}"  # noqa
+        expected_str = f"date: {date}, time: {time}, users: None, departure time: {departure_time}, arrival time: {arrival_time}, FLIGHT, flight_number: {flight_number}"  # noqa
 
         # act
         plane = Plane(
@@ -157,7 +157,7 @@ class TestTrain(unittest.TestCase):
         departure_station = "Penn Station, NYC"
         arrival_station = "Bernardsville, NJ"
 
-        expected_str = f"date: {date}, time: {time}, departure time: {departure_time}, arrival time: {arrival_time}, TRAIN, departure_station: {departure_station}, arrival_station: {arrival_station}"  # noqa
+        expected_str = f"date: {date}, time: {time}, users: None, departure time: {departure_time}, arrival time: {arrival_time}, TRAIN, departure_station: {departure_station}, arrival_station: {arrival_station}"  # noqa
 
         # act
         train = Train(
@@ -223,7 +223,7 @@ class TestBoat(unittest.TestCase):
         arrival_terminal = "Jersey City Slip 5"
         route = "Goldman Sachs Interoffice Ferry"
 
-        expected_str = f"date: {date}, time: {time}, departure time: {departure_time}, arrival time: {arrival_time}, BOAT, departure_terminal: {departure_terminal}, arrival_terminal: {arrival_terminal}"  # noqa
+        expected_str = f"date: {date}, time: {time}, users: None, departure time: {departure_time}, arrival time: {arrival_time}, BOAT, departure_terminal: {departure_terminal}, arrival_terminal: {arrival_terminal}"  # noqa
 
         # act
         boat = Boat(
@@ -289,7 +289,7 @@ class TestCar(unittest.TestCase):
         arrival_location = "NYU Lafayette"
         company = "Lyft"
 
-        expected_str = f"date: {date}, time: {time}, departure time: {departure_time}, arrival time: {arrival_time}, CAR, departure_location: {departure_location}, arrival_location: {arrival_location}"  # noqa
+        expected_str = f"date: {date}, time: {time}, users: None, departure time: {departure_time}, arrival time: {arrival_time}, CAR, departure_location: {departure_location}, arrival_location: {arrival_location}"  # noqa
 
         # act
         car = Car(

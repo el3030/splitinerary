@@ -40,6 +40,34 @@ coverage:  ## clean and run unit tests with coverage
 # Alias
 tests: test
 
+###########
+# VERSION #
+###########
+show-version:
+	bump2version --dry-run --allow-dirty setup.py --list | grep current | awk -F= '{print $2}'
+
+patch:
+	bump2version patch
+
+minor:
+	bump2version minor
+
+major:
+	bump2version major
+
+########
+# DIST #
+########
+dist-build:  # Build python dist
+	python setup.py sdist bdist_wheel
+
+dist-check:
+	python -m twine check dist/*
+
+dist: clean build dist-build dist-check  ## Build dists
+
+publish:  # Upload python assets
+	echo "would usually run python -m twine upload dist/* --skip-existing"
 
 #########
 # CLEAN #
