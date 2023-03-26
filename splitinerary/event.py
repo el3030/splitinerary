@@ -16,7 +16,7 @@ class Event:
             self.users = users
 
     def add_user(self, user):
-        self.users.add(user)
+        self.users.append(user)
 
     def get_users(self):
         return self.users if self.users else None
