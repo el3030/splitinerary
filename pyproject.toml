@@ -11,7 +11,7 @@ name = "splitinerary"
 authors = [{name = "Eugene Li", email = "el3030@columbia.edu"}]
 description="A collaborative itinerary for planning group trips!"
 readme = "README.md"
-version = "0.0.1"
+version = "0.1.0"
 requires-python = ">=3.8"
 
 dependencies = []
