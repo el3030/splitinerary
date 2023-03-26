@@ -7,7 +7,6 @@ Splitinerary is a collaborative itinerary library in Python.
 [![Build Status](https://github.com/el3030/splitinerary/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/el3030/splitinerary/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/el3030/splitinerary/branch/main/graph/badge.svg)](https://codecov.io/gh/el3030/splitinerary)
 
-
 ## Overview
 
 Coordinating a group to go on a trip together is difficult because some people may fly to the same destination from different origins, some people may split off mid-trip to go somewhere else and rejoin, and some people might be staying in different places (with relatives, for example). This python program will be the core functionality for an app that allows users to work together to create a collaborative itinerary.
@@ -19,7 +18,7 @@ Coordinating a group to go on a trip together is difficult because some people m
 
 The end result is a comprehensive itinerary where every person in the trip can see who is doing what at any given point in time.
 
-## Details
+## Make
 
 It uses a Makefile as a command registry, with the following commands:
 
@@ -30,3 +29,49 @@ It uses a Makefile as a command registry, with the following commands:
 - `make format`: autoformat this library using `black`
 - `make test`: run automated tests with `unittest`
 - `make coverage`: run automated tests with `unittest` and collect coverage information
+
+## Installation
+
+Shell command to install the library from PyPI:
+```
+pip install splitinerary
+```
+
+## Usage
+
+After installing the library, import the splitinerary module:
+```
+import splitinerary
+```
+Or import specific objects to use:
+```
+from splitinerary import Trip, Plane
+```
+
+Example program for a simple trip:
+```
+from splitinerary import Trip, Plane
+import datetime
+
+now = datetime.datetime.now()
+date = now.date()
+trip = Trip()
+event = Event(now)
+
+trip.add_event(event)
+
+events = trip.get_all_events()
+```
+
+For a full list of objects and functions, please see documentation.
+
+## Documentation
+
+To be released soon!
+
+## Details
+
+The source code is currently hosted on GitHub at: https://github.com/el3030/splitinerary
+
+
+
