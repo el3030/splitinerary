@@ -39,7 +39,11 @@ repository = "https://github.com/el3030/splitinerary"
 develop = [
     "black>=22",
     "flake8>=3.7.8",
-    "coverage>=7.2.1"
+    "coverage>=7.2.1",
+    "check-manifest",
+    "bump2version>=1.0.0",
+    "twine",
+    "wheel",
 ]
 
 [tool.black]
