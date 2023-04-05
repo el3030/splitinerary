@@ -71,8 +71,8 @@
 
 
 <div class="viewcode-block" id="Transportation"><a class="viewcode-back" href="../../splitinerary.html#splitinerary.transportation.Transportation">[docs]</a><span class="k">class</span> <span class="nc">Transportation</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">Event</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Transporation object that the vehicle objects inherit from.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Transporation object that the vehicle objects inherit from.&quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">departure_time</span><span class="p">,</span> <span class="n">arrival_time</span><span class="p">,</span> <span class="n">cost</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">confirmation_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>  <span class="c1"># noqa</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Inits Transportation.</span>
 
@@ -94,8 +94,8 @@
 
 
 <div class="viewcode-block" id="Plane"><a class="viewcode-back" href="../../splitinerary.html#splitinerary.transportation.Plane">[docs]</a><span class="k">class</span> <span class="nc">Plane</span><span class="p">(</span><span class="n">Transportation</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plane transportation method.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plane transportation method.&quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flight_number</span><span class="p">,</span> <span class="n">departure_terminal</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">arrival_terminal</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>  <span class="c1"># noqa</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Inits Plane</span>
 
@@ -116,8 +116,8 @@
 
 
 <div class="viewcode-block" id="Train"><a class="viewcode-back" href="../../splitinerary.html#splitinerary.transportation.Train">[docs]</a><span class="k">class</span> <span class="nc">Train</span><span class="p">(</span><span class="n">Transportation</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Train transporation method.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Train transporation method.&quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">departure_station</span><span class="p">,</span> <span class="n">arrival_station</span><span class="p">,</span> <span class="n">train_line</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>  <span class="c1"># noqa</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Inits Train</span>
 
@@ -140,8 +140,8 @@
 
 
 <div class="viewcode-block" id="Boat"><a class="viewcode-back" href="../../splitinerary.html#splitinerary.transportation.Boat">[docs]</a><span class="k">class</span> <span class="nc">Boat</span><span class="p">(</span><span class="n">Transportation</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Boat transportation method.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Boat transportation method.&quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">departure_terminal</span><span class="p">,</span> <span class="n">arrival_terminal</span><span class="p">,</span> <span class="n">route</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>  <span class="c1"># noqa</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;_summary_</span>
 
@@ -164,8 +164,8 @@
 
 
 <div class="viewcode-block" id="Car"><a class="viewcode-back" href="../../splitinerary.html#splitinerary.transportation.Car">[docs]</a><span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="n">Transportation</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Car transportation method.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Car transportation method.&quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">departure_location</span><span class="p">,</span> <span class="n">arrival_location</span><span class="p">,</span> <span class="n">company</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>  <span class="c1"># noqa</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;_summary_</span>
 

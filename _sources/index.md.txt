@@ -47,3 +47,6 @@ For a full list of objects and functions, please see documentation.
 * :ref:`genindex`
 * :ref:`modindex`
 ```
+
+## Examples
+
