@@ -1,3 +1,5 @@
+TMPREPO=/tmp/docs/splitinerary
+
 #########
 # BUILD #
 #########
@@ -77,6 +79,26 @@ deep-clean: ## clean everything from the repository
 
 clean: ## clean the repository
 	rm -rf .coverage coverage cover htmlcov logs build dist *.egg-info .pytest_cache
+
+########
+# DOCS #
+########
+
+docs: 
+	$(MAKE) -C docs/ clean
+	$(MAKE) -C docs/ html
+
+pages:
+	$(MAKE) -C docs/ clean
+	$(MAKE) -C docs/ html
+	rm -rf $(TMPREPO)
+	git clone -b gh-pages https://github.com/el3030/splitinerary.git $(TMPREPO)
+	rm -rf $(TMPREPO)/*
+	cp -r docs/_build/html/* $(TMPREPO)
+	cd $(TMPREPO);\
+	git add -A ;\
+	git commit -a -m 'auto-updating docs' ;\
+	git push
 
 ############################################################################################
 

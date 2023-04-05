@@ -2,7 +2,18 @@ from . import event
 
 
 class CustomEvent(event.Event):
+    """Custom Events like concerts, parties, shows, etc."""
+
     def __init__(self, event_name, description, start_time, end_time, cost=0, *args, **kw):  # noqa
+        """Inits CustomEvent
+
+        Args:
+            event_name (str): _description_
+            description (str): _description_
+            start_time (datetime.Datetime): _description_
+            end_time (datetime.Datetime): _description_
+            cost (int, optional): _description_. Defaults to 0.
+        """
         self.event_name = event_name
         self.description = description
         self.cost = cost
