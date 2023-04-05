@@ -89,6 +89,8 @@ docs:
 	$(MAKE) -C docs/ html
 
 pages:
+	$(MAKE) -C docs/ clean
+	$(MAKE) -C docs/ html
 	rm -rf $(TMPREPO)
 	git clone -b gh-pages https://github.com/el3030/splitinerary.git $(TMPREPO)
 	rm -rf $(TMPREPO)/*

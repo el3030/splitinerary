@@ -70,7 +70,7 @@ For a full list of objects and functions, please see documentation.
 
 ## Documentation
 
-To be released soon!
+https://el3030.github.io/splitinerary/
 
 ## Details
 
