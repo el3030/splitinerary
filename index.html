@@ -121,6 +121,106 @@
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">splitinerary</span> <span class="kn">import</span> <span class="n">Trip</span><span class="p">,</span> <span class="n">User</span><span class="p">,</span> <span class="n">CustomEvent</span><span class="p">,</span> <span class="n">Plane</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="c1"># Create Users</span>
+<span class="n">alice</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="s2">&quot;Alice@Columbia.edu&quot;</span><span class="p">)</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Jones&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob@Columbia.edu&quot;</span><span class="p">)</span>
+<span class="n">charlie</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;Berens&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie@Columbia.edu&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create times</span>
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">tomorrow</span> <span class="o">=</span> <span class="n">now</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="c1"># Create Trip</span>
+<span class="n">summer_vacation</span> <span class="o">=</span> <span class="n">Trip</span><span class="p">()</span>
+
+<span class="c1"># Create Events</span>
+<span class="n">alice_flight</span> <span class="o">=</span> <span class="n">Plane</span><span class="p">(</span><span class="s2">&quot;DL188&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;DTW&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;LGA&quot;</span><span class="p">,</span>
+                     <span class="n">now</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+                     <span class="n">now</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+                     <span class="mf">155.85</span><span class="p">,</span>
+                     <span class="s2">&quot;GY60P1Q&quot;</span><span class="p">,</span>
+                     <span class="n">now</span><span class="p">,</span>
+                     <span class="p">[</span><span class="n">alice</span><span class="p">]</span>
+                     <span class="p">)</span>
+
+<span class="n">bob_flight</span> <span class="o">=</span> <span class="n">Plane</span><span class="p">(</span><span class="s2">&quot;NKS183&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;PHL&quot;</span><span class="p">,</span>
+                   <span class="s2">&quot;LGA&quot;</span><span class="p">,</span>
+                   <span class="n">now</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                   <span class="n">now</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">6</span><span class="p">),</span>
+                   <span class="mf">129.44</span><span class="p">,</span>
+                   <span class="s2">&quot;HS15ON7&quot;</span><span class="p">,</span>
+                   <span class="n">now</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+                   <span class="p">[</span><span class="n">bob</span><span class="p">])</span>
+
+<span class="n">concert</span> <span class="o">=</span> <span class="n">CustomEvent</span><span class="p">(</span><span class="s2">&quot;Dua Lipa Concert&quot;</span><span class="p">,</span>
+                      <span class="s2">&quot;Part of a music festival&quot;</span><span class="p">,</span>
+                      <span class="n">tomorrow</span><span class="p">,</span>
+                      <span class="n">tomorrow</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+                      <span class="mf">450.00</span><span class="p">,</span>
+                      <span class="n">tomorrow</span><span class="p">,</span>
+                      <span class="p">[</span><span class="n">alice</span><span class="p">,</span> <span class="n">bob</span><span class="p">])</span>
+
+<span class="c1"># Add Events to Trip</span>
+<span class="n">summer_vacation</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="n">alice_flight</span><span class="p">)</span>
+<span class="n">summer_vacation</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="n">bob_flight</span><span class="p">)</span>
+<span class="n">summer_vacation</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="n">concert</span><span class="p">)</span>
+
+<span class="c1"># get_events_on_date usage example 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------Example 1----------&#39;</span><span class="p">)</span>
+<span class="n">todays_events</span> <span class="o">=</span> <span class="n">summer_vacation</span><span class="o">.</span><span class="n">get_events_on_date</span><span class="p">(</span><span class="n">tomorrow</span><span class="o">.</span><span class="n">date</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">todays_events</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># get_eventful_dates usage example 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------Example 2----------&#39;</span><span class="p">)</span>
+<span class="n">eventful_dates</span> <span class="o">=</span> <span class="n">summer_vacation</span><span class="o">.</span><span class="n">get_eventful_dates</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eventful_dates</span><span class="p">)</span>
+
+<span class="c1"># get_all_events usage example 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------Example 3----------&#39;</span><span class="p">)</span>
+<span class="n">all_events</span> <span class="o">=</span> <span class="n">summer_vacation</span><span class="o">.</span><span class="n">get_all_events</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_events</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># get_next_event usage example 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------Example 4----------&#39;</span><span class="p">)</span>
+<span class="n">next_event</span> <span class="o">=</span> <span class="n">summer_vacation</span><span class="o">.</span><span class="n">get_next_event</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">next_event</span><span class="p">)</span>
+
+<span class="c1"># get_users_list usage example 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------Example 5----------&#39;</span><span class="p">)</span>
+<span class="n">users_list</span> <span class="o">=</span> <span class="n">summer_vacation</span><span class="o">.</span><span class="n">get_users_list</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">user</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">users_list</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># get_events_of_user usage example 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------Example 6----------&#39;</span><span class="p">)</span>
+<span class="n">alices_events</span> <span class="o">=</span> <span class="n">summer_vacation</span><span class="o">.</span><span class="n">get_events_of_user</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">alices_events</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># remove_user_from_event usage example 7</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------Example 7----------&#39;</span><span class="p">)</span>
+<span class="n">summer_vacation</span><span class="o">.</span><span class="n">remove_user_from_event</span><span class="p">(</span><span class="n">bob</span><span class="p">,</span> <span class="n">concert</span><span class="p">)</span>
+<span class="n">bobs_events</span> <span class="o">=</span> <span class="n">summer_vacation</span><span class="o">.</span><span class="n">get_events_of_user</span><span class="p">(</span><span class="n">bob</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bobs_events</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># remove_event_by_index usage example</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------Example 8----------&#39;</span><span class="p">)</span>
+<span class="n">summer_vacation</span><span class="o">.</span><span class="n">remove_event_by_index</span><span class="p">(</span><span class="n">tomorrow</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">trips_events</span> <span class="o">=</span> <span class="n">summer_vacation</span><span class="o">.</span><span class="n">get_all_events</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">trips_events</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 
