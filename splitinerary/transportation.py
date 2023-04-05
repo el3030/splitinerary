@@ -2,8 +2,8 @@ from . import event
 
 
 class Transportation(event.Event):
-    """Transporation object that the vehicle objects inherit from.
-    """
+    """Transporation object that the vehicle objects inherit from."""
+
     def __init__(self, departure_time, arrival_time, cost=0, confirmation_code=None, *args, **kw):  # noqa
         """Inits Transportation.
 
@@ -25,8 +25,8 @@ class Transportation(event.Event):
 
 
 class Plane(Transportation):
-    """Plane transportation method.
-    """
+    """Plane transportation method."""
+
     def __init__(self, flight_number, departure_terminal=None, arrival_terminal=None, *args, **kw):  # noqa
         """Inits Plane
 
@@ -47,8 +47,8 @@ class Plane(Transportation):
 
 
 class Train(Transportation):
-    """Train transporation method.
-    """
+    """Train transporation method."""
+
     def __init__(self, departure_station, arrival_station, train_line=None, *args, **kw):  # noqa
         """Inits Train
 
@@ -71,8 +71,8 @@ class Train(Transportation):
 
 
 class Boat(Transportation):
-    """Boat transportation method.
-    """
+    """Boat transportation method."""
+
     def __init__(self, departure_terminal, arrival_terminal, route=None, *args, **kw):  # noqa
         """_summary_
 
@@ -95,8 +95,8 @@ class Boat(Transportation):
 
 
 class Car(Transportation):
-    """Car transportation method.
-    """
+    """Car transportation method."""
+
     def __init__(self, departure_location, arrival_location, company=None, *args, **kw):  # noqa
         """_summary_
 

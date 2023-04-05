@@ -6,6 +6,7 @@ class User:
         last_name (str): Last name of person.
         email (str, optional): Email of person. Defaults to None.
     """
+
     def __init__(self, first_name, last_name, email=None):
         """Inits User.
 

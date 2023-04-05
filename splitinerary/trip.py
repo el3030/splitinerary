@@ -16,8 +16,7 @@ class Trip:
     """
 
     def __init__(self):
-        """Inits Trip.
-        """
+        """Inits Trip."""
         self.dates_list = []
         self.dates_dict = {}
         self.user_activities = defaultdict(lambda: defaultdict(list))
