@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>splitinerary package &mdash; Splitinerary 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="setup module" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Splitinerary
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">splitinerary</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">splitinerary package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-splitinerary.custom_event">splitinerary.custom_event module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.custom_event.CustomEvent"><code class="docutils literal notranslate"><span class="pre">CustomEvent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-splitinerary.event">splitinerary.event module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.event.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-splitinerary.transportation">splitinerary.transportation module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.transportation.Boat"><code class="docutils literal notranslate"><span class="pre">Boat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.transportation.Car"><code class="docutils literal notranslate"><span class="pre">Car</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.transportation.Plane"><code class="docutils literal notranslate"><span class="pre">Plane</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.transportation.Train"><code class="docutils literal notranslate"><span class="pre">Train</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.transportation.Transportation"><code class="docutils literal notranslate"><span class="pre">Transportation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-splitinerary.trip">splitinerary.trip module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.trip.Trip"><code class="docutils literal notranslate"><span class="pre">Trip</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-splitinerary.user">splitinerary.user module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.user.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-splitinerary">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.Boat"><code class="docutils literal notranslate"><span class="pre">Boat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.Car"><code class="docutils literal notranslate"><span class="pre">Car</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.Plane"><code class="docutils literal notranslate"><span class="pre">Plane</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.Train"><code class="docutils literal notranslate"><span class="pre">Train</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.Transportation"><code class="docutils literal notranslate"><span class="pre">Transportation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.Trip"><code class="docutils literal notranslate"><span class="pre">Trip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splitinerary.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Splitinerary</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">splitinerary</a></li>
+      <li class="breadcrumb-item active">splitinerary package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/splitinerary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="splitinerary-package">
+<h1>splitinerary package<a class="headerlink" href="#splitinerary-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-splitinerary.custom_event">
+<span id="splitinerary-custom-event-module"></span><h2>splitinerary.custom_event module<a class="headerlink" href="#module-splitinerary.custom_event" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.custom_event.CustomEvent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.custom_event.</span></span><span class="sig-name descname"><span class="pre">CustomEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/custom_event.html#CustomEvent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.custom_event.CustomEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.event.Event" title="splitinerary.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-splitinerary.event">
+<span id="splitinerary-event-module"></span><h2>splitinerary.event module<a class="headerlink" href="#module-splitinerary.event" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.event.Event">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.event.</span></span><span class="sig-name descname"><span class="pre">Event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">users</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.event.Event" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Event object. Each event is sortable among other Events by datetime.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>datetime (datetime.datetime): when the user wants to arrive at</dt><dd><p>the event, NOT NECESSARILY when the event starts (e.g. user might
+arrive at the airport 2 hours before the flight departs).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.event.Event.add_user">
+<span class="sig-name descname"><span class="pre">add_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event.add_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.event.Event.add_user" title="Permalink to this definition"></a></dt>
+<dd><p>Add user to Event.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user (User): User to add to Event.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.event.Event.get_date">
+<span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event.get_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.event.Event.get_date" title="Permalink to this definition"></a></dt>
+<dd><p>Get date of Event.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>datetime.Date: Date the event takes place on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.event.Event.get_time">
+<span class="sig-name descname"><span class="pre">get_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event.get_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.event.Event.get_time" title="Permalink to this definition"></a></dt>
+<dd><p>Get time of Event (without the date).</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>datetime.Time: Time the event takes place on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.event.Event.get_users">
+<span class="sig-name descname"><span class="pre">get_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event.get_users"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.event.Event.get_users" title="Permalink to this definition"></a></dt>
+<dd><p>Get Users participating in Event.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>list of User: Users participating in Event if there are any,</dt><dd><p>else None.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-splitinerary.transportation">
+<span id="splitinerary-transportation-module"></span><h2>splitinerary.transportation module<a class="headerlink" href="#module-splitinerary.transportation" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.transportation.Boat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.transportation.</span></span><span class="sig-name descname"><span class="pre">Boat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">departure_terminal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_terminal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Boat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.transportation.Boat" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.transportation.Transportation" title="splitinerary.transportation.Transportation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transportation</span></code></a></p>
+<p>Boat transportation method.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.transportation.Car">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.transportation.</span></span><span class="sig-name descname"><span class="pre">Car</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">departure_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Car"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.transportation.Car" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.transportation.Transportation" title="splitinerary.transportation.Transportation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transportation</span></code></a></p>
+<p>Car transportation method.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.transportation.Plane">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.transportation.</span></span><span class="sig-name descname"><span class="pre">Plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flight_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">departure_terminal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_terminal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Plane"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.transportation.Plane" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.transportation.Transportation" title="splitinerary.transportation.Transportation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transportation</span></code></a></p>
+<p>Plane transportation method.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.transportation.Train">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.transportation.</span></span><span class="sig-name descname"><span class="pre">Train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">departure_station</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_station</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.transportation.Train" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.transportation.Transportation" title="splitinerary.transportation.Transportation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transportation</span></code></a></p>
+<p>Train transporation method.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.transportation.Transportation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.transportation.</span></span><span class="sig-name descname"><span class="pre">Transportation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">departure_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confirmation_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Transportation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.transportation.Transportation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.event.Event" title="splitinerary.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p>
+<p>Transporation object that the vehicle objects inherit from.</p>
+</dd></dl>
+
+</section>
+<section id="module-splitinerary.trip">
+<span id="splitinerary-trip-module"></span><h2>splitinerary.trip module<a class="headerlink" href="#module-splitinerary.trip" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.trip.</span></span><span class="sig-name descname"><span class="pre">Trip</span></span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Trip object that everything else in Splitinerary gets added to.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>dates_list (list of datetime.date): sortable list of datetime.date,</dt><dd><p>used to keep track of which dates have events on them.</p>
+</dd>
+<dt>dates_dict (dict of datetime.date<span class="classifier">event.Event):</span></dt><dd><p>keys can be used to see if date exists in trip, values are lists
+(that can be sorted) of each day’s events.</p>
+</dd>
+<dt>user_activities (dict of user: {date: [event1, event2]}):</dt><dd><p>Maps users to their activities on dates</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.add_event">
+<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.add_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.add_event" title="Permalink to this definition"></a></dt>
+<dd><p>Add an Event object to the Trip.
+This involves adding the date of the event to self.dates_list and
+adding the event to self.dates_dict[date].</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>event (Event):  The event to be added to the Trip.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.get_all_events">
+<span class="sig-name descname"><span class="pre">get_all_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_all_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.get_all_events" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all events in the Trip in order of start time.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list of Event: sorted list of all events in the
+trip.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.get_eventful_dates">
+<span class="sig-name descname"><span class="pre">get_eventful_dates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_eventful_dates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.get_eventful_dates" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Print all of the dates that have an event on them in order of start</dt><dd><p>time.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list of datetime.date: sorted list of dates that have
+events on them if it exists, else None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.get_events_of_user">
+<span class="sig-name descname"><span class="pre">get_events_of_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_events_of_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.get_events_of_user" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the events of a given User.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user (User): A User in the Trip.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict of user: {date: [event1, event2]} : dictionary of user’s
+events for each day.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.get_events_on_date">
+<span class="sig-name descname"><span class="pre">get_events_on_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_events_on_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.get_events_on_date" title="Permalink to this definition"></a></dt>
+<dd><p>Returns of the events on a certain day in order of start time.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>date (datetime.date):  the date whose events are to be returned.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list of (datetime.time, Event): sorted list of tuples of
+events on the input date if it exists, else None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.get_next_event">
+<span class="sig-name descname"><span class="pre">get_next_event</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_next_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.get_next_event" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the next event that will take place for any user.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Event: the next event that will take place for any
+User if it exists, else None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.get_users_list">
+<span class="sig-name descname"><span class="pre">get_users_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_users_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.get_users_list" title="Permalink to this definition"></a></dt>
+<dd><p>Gets list of users participating in Trip.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list of Users: A list of users participating in Trip.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.remove_event_by_index">
+<span class="sig-name descname"><span class="pre">remove_event_by_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.remove_event_by_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.remove_event_by_index" title="Permalink to this definition"></a></dt>
+<dd><p>Remove an Event from a Trip given a date and index of Event on date.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>date (datetime.Date): Date of event.
+index (int): Index of Event on date, in order of time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.trip.Trip.remove_user_from_event">
+<span class="sig-name descname"><span class="pre">remove_user_from_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.remove_user_from_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.trip.Trip.remove_user_from_event" title="Permalink to this definition"></a></dt>
+<dd><p>Remove a User from an Event in the Trip.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user (User): User to remove from Event.
+event (Event): Event from which User is being removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-splitinerary.user">
+<span id="splitinerary-user-module"></span><h2>splitinerary.user module<a class="headerlink" href="#module-splitinerary.user" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.user.User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.user.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/user.html#User"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.user.User" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>User object to represent people participating in a Trip.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>first_name (str): First name of person.
+last_name (str): Last name of person.
+email (str, optional): Email of person. Defaults to None.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.user.User.get_email">
+<span class="sig-name descname"><span class="pre">get_email</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/user.html#User.get_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.user.User.get_email" title="Permalink to this definition"></a></dt>
+<dd><p>Get the email of a User.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: The email of the User.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-splitinerary">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-splitinerary" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.Boat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.</span></span><span class="sig-name descname"><span class="pre">Boat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">departure_terminal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_terminal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Boat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Boat" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.transportation.Transportation" title="splitinerary.transportation.Transportation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transportation</span></code></a></p>
+<p>Boat transportation method.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.Car">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.</span></span><span class="sig-name descname"><span class="pre">Car</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">departure_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Car"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Car" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.transportation.Transportation" title="splitinerary.transportation.Transportation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transportation</span></code></a></p>
+<p>Car transportation method.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.Event">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.</span></span><span class="sig-name descname"><span class="pre">Event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">users</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Event" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Event object. Each event is sortable among other Events by datetime.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>datetime (datetime.datetime): when the user wants to arrive at</dt><dd><p>the event, NOT NECESSARILY when the event starts (e.g. user might
+arrive at the airport 2 hours before the flight departs).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Event.add_user">
+<span class="sig-name descname"><span class="pre">add_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event.add_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Event.add_user" title="Permalink to this definition"></a></dt>
+<dd><p>Add user to Event.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user (User): User to add to Event.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Event.get_date">
+<span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event.get_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Event.get_date" title="Permalink to this definition"></a></dt>
+<dd><p>Get date of Event.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>datetime.Date: Date the event takes place on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Event.get_time">
+<span class="sig-name descname"><span class="pre">get_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event.get_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Event.get_time" title="Permalink to this definition"></a></dt>
+<dd><p>Get time of Event (without the date).</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>datetime.Time: Time the event takes place on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Event.get_users">
+<span class="sig-name descname"><span class="pre">get_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/event.html#Event.get_users"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Event.get_users" title="Permalink to this definition"></a></dt>
+<dd><p>Get Users participating in Event.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>list of User: Users participating in Event if there are any,</dt><dd><p>else None.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.Plane">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.</span></span><span class="sig-name descname"><span class="pre">Plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flight_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">departure_terminal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_terminal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Plane"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Plane" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.transportation.Transportation" title="splitinerary.transportation.Transportation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transportation</span></code></a></p>
+<p>Plane transportation method.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.Train">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.</span></span><span class="sig-name descname"><span class="pre">Train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">departure_station</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_station</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Train" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.transportation.Transportation" title="splitinerary.transportation.Transportation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Transportation</span></code></a></p>
+<p>Train transporation method.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.Transportation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.</span></span><span class="sig-name descname"><span class="pre">Transportation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">departure_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrival_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confirmation_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/transportation.html#Transportation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Transportation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#splitinerary.event.Event" title="splitinerary.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p>
+<p>Transporation object that the vehicle objects inherit from.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.Trip">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.</span></span><span class="sig-name descname"><span class="pre">Trip</span></span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Trip object that everything else in Splitinerary gets added to.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>dates_list (list of datetime.date): sortable list of datetime.date,</dt><dd><p>used to keep track of which dates have events on them.</p>
+</dd>
+<dt>dates_dict (dict of datetime.date<span class="classifier">event.Event):</span></dt><dd><p>keys can be used to see if date exists in trip, values are lists
+(that can be sorted) of each day’s events.</p>
+</dd>
+<dt>user_activities (dict of user: {date: [event1, event2]}):</dt><dd><p>Maps users to their activities on dates</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.add_event">
+<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.add_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.add_event" title="Permalink to this definition"></a></dt>
+<dd><p>Add an Event object to the Trip.
+This involves adding the date of the event to self.dates_list and
+adding the event to self.dates_dict[date].</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>event (Event):  The event to be added to the Trip.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.get_all_events">
+<span class="sig-name descname"><span class="pre">get_all_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_all_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.get_all_events" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all events in the Trip in order of start time.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list of Event: sorted list of all events in the
+trip.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.get_eventful_dates">
+<span class="sig-name descname"><span class="pre">get_eventful_dates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_eventful_dates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.get_eventful_dates" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Print all of the dates that have an event on them in order of start</dt><dd><p>time.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list of datetime.date: sorted list of dates that have
+events on them if it exists, else None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.get_events_of_user">
+<span class="sig-name descname"><span class="pre">get_events_of_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_events_of_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.get_events_of_user" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the events of a given User.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user (User): A User in the Trip.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict of user: {date: [event1, event2]} : dictionary of user’s
+events for each day.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.get_events_on_date">
+<span class="sig-name descname"><span class="pre">get_events_on_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_events_on_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.get_events_on_date" title="Permalink to this definition"></a></dt>
+<dd><p>Returns of the events on a certain day in order of start time.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>date (datetime.date):  the date whose events are to be returned.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list of (datetime.time, Event): sorted list of tuples of
+events on the input date if it exists, else None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.get_next_event">
+<span class="sig-name descname"><span class="pre">get_next_event</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_next_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.get_next_event" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the next event that will take place for any user.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Event: the next event that will take place for any
+User if it exists, else None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.get_users_list">
+<span class="sig-name descname"><span class="pre">get_users_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.get_users_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.get_users_list" title="Permalink to this definition"></a></dt>
+<dd><p>Gets list of users participating in Trip.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list of Users: A list of users participating in Trip.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.remove_event_by_index">
+<span class="sig-name descname"><span class="pre">remove_event_by_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.remove_event_by_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.remove_event_by_index" title="Permalink to this definition"></a></dt>
+<dd><p>Remove an Event from a Trip given a date and index of Event on date.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>date (datetime.Date): Date of event.
+index (int): Index of Event on date, in order of time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.Trip.remove_user_from_event">
+<span class="sig-name descname"><span class="pre">remove_user_from_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/trip.html#Trip.remove_user_from_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.Trip.remove_user_from_event" title="Permalink to this definition"></a></dt>
+<dd><p>Remove a User from an Event in the Trip.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user (User): User to remove from Event.
+event (Event): Event from which User is being removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="splitinerary.User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">splitinerary.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/user.html#User"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.User" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>User object to represent people participating in a Trip.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>first_name (str): First name of person.
+last_name (str): Last name of person.
+email (str, optional): Email of person. Defaults to None.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="splitinerary.User.get_email">
+<span class="sig-name descname"><span class="pre">get_email</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/splitinerary/user.html#User.get_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#splitinerary.User.get_email" title="Permalink to this definition"></a></dt>
+<dd><p>Get the email of a User.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>str: The email of the User.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="setup module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, el3030.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
