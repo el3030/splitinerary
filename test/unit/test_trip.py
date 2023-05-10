@@ -316,3 +316,23 @@ class TestRemoveUserFromEvent(unittest.TestCase):
         # assert
         event_participants = event1.get_users()
         self.assertListEqual(event_participants, [user2])
+
+
+class TestAddUserToEvent(unittest.TestCase):
+    def test_add_user_to_event_success(self):
+        # arrange
+        now = datetime.datetime.now()
+
+        user1 = User('tim', 'paine', 'tim@columbia.edu')
+        user2 = User('catelen', 'wu', 'catelen@columbia.edu')
+        event1 = Event(now, [user1])
+
+        trip = Trip()
+        trip.add_event(event1)
+
+        # act
+        trip.add_user_to_event(user2, event1)
+
+        # assert
+        event_participants = event1.get_users()
+        self.assertListEqual(event_participants, [user1, user2])
