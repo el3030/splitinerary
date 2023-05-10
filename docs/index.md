@@ -143,10 +143,17 @@ bobs_events = summer_vacation.get_events_of_user(bob)
 for i, event in enumerate(bobs_events, 1):
     print(f'{i}: {event}')
 
-# remove_event_by_index usage example
+# remove_event_by_index usage example 8
 print('----------Example 8----------')
 summer_vacation.remove_event_by_index(tomorrow, 0)
 trips_events = summer_vacation.get_all_events()
 for i, event in enumerate(trips_events, 1):
+    print(f'{i}: {event}')
+
+# add_user_to_event usage example 9
+print('----------Example 9----------')
+summer_vacation.add_user_to_event(charlie, concert)
+charlies_events = summer_vacation.get_events_of_user(charlie)
+for i, event in enumerate(charlies_events, 1):
     print(f'{i}: {event}')
 ```

@@ -160,3 +160,18 @@ class Trip:
 
         users_list = event.get_users()
         users_list.remove(user)
+
+    def add_user_to_event(self, user, event):
+        """Add a user to an Event in the Trip.
+
+        Args:
+            user (User): User to add to the Event.
+            event (Event): Event from which User is being added.
+        """
+        event_date = event.get_date()
+
+        users_events = self.user_activities[user]
+        users_events[event_date].append(event)
+
+        users_list = event.get_users()
+        users_list.append(user)
