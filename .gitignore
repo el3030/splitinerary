@@ -132,6 +132,6 @@ dmypy.json
 
 #MacOS hidden files
 .DS_Store
-Icon
+Icon
 
 .vscode
