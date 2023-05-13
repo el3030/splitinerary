@@ -1,4 +1,5 @@
 import datetime
+import heapq
 from collections import defaultdict
 
 
@@ -92,12 +93,15 @@ class Trip:
             User if it exists, else None.
         """
         now = datetime.datetime.now()
-        all_events = self.get_all_events()
-        for event in all_events:
-            if event.datetime < now:
-                continue
-            return event
-        return None
+        min_heap = []
+        for events in self.dates_dict.values():
+            for event in events:
+                if event.datetime >= now:
+                    heapq.heappush(min_heap, event)
+        if min_heap:
+            return min_heap[0]
+        else:
+            return None
 
     def get_users_list(self):
         """Gets list of users participating in Trip.
